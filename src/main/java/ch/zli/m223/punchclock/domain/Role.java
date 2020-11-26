@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Entity
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,6 +17,7 @@ public class Role {
 
     @Column
     private String name;
+
 
     @OneToMany(mappedBy = "role")
     private List<ApplicationUser> applicationUsers;

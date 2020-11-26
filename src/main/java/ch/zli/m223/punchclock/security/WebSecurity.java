@@ -1,6 +1,6 @@
 package ch.zli.m223.punchclock.security;
 
-import ch.zli.m223.punchclock.domain.UserDetailsServiceImpl;
+import ch.zli.m223.punchclock.service.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -34,6 +34,10 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
               .antMatchers(HttpMethod.GET, GET_HOMEPAGE_JS).permitAll()
               .antMatchers(HttpMethod.GET, GET_HOMEPAGE_HTML).permitAll()
               .antMatchers(HttpMethod.POST, GET_LOGIN_URL).permitAll()
+              .antMatchers(HttpMethod.GET, GET_REGISTER).permitAll()
+              .antMatchers(HttpMethod.GET, GET_REGISTER_JS).permitAll()
+              .antMatchers(HttpMethod.GET, GET_CONSOLE).permitAll()
+              .antMatchers(HttpMethod.GET, "**").permitAll()
               .antMatchers(HttpMethod.GET, "/").permitAll()
               .anyRequest().authenticated()
               .and()

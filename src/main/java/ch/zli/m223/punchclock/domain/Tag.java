@@ -3,6 +3,7 @@ package ch.zli.m223.punchclock.domain;
 import javax.persistence.*;
 import java.util.List;
 
+@Entity
 public class Tag {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
