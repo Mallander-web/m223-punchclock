@@ -27,7 +27,7 @@ public class Entry {
     private LocalDateTime checkOut;
 
     @ManyToOne
-    @JoinColumn(name ="applikationuser_id")
+    @JoinColumn(name ="applicationuser_id")
     @JsonIgnore
     private ApplicationUser applicationUser;
 

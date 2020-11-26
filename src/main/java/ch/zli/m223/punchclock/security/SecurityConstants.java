@@ -13,6 +13,7 @@ public class SecurityConstants {
   public static final String GET_HOMEPAGE_JS = "/homepage.js";
   public static final String GET_REGISTER = "/register.html";
   public static final String GET_REGISTER_JS = "/register.js";
+  public static final String ENTRIES = "/entries";
   public static final String GET_CONSOLE = "/h2-console";
 
 }

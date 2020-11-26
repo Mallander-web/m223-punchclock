@@ -20,7 +20,7 @@ public class UserController {
         this.applicationUserRepository = applicationUserRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
-
+    //creates entry in database
     @PostMapping("/sign-up")
     public void signUp(@RequestBody ApplicationUser user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
